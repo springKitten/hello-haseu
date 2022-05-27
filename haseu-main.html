@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Real</title>
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+    <nav class="nav-container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img class="hello-haseu-icon" src="./img/Hello_Haseu_high_quality.png" alt="">
+        </div>
+        <ul>
+          <li class="menu-list active">
+            <a href="haseu-main.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="menu-list">
+            <a href="https://www.twitch.tv/haseu_">
+              <span class="icon">
+                <ion-icon name="logo-twitch"></ion-icon>
+              </span>
+              <span class="text">Twitch</span>
+            </a>
+          </li>
+          <li class="menu-list">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="document-attach-outline"></ion-icon>
+              </span>
+              <span class="text">세유 Wiki</span>
+            </a>
+          </li>
+          <li class="menu-list">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="server-outline"></ion-icon>
+              </span>
+              <span class="text">트수 Wiki</span>
+            </a>
+          </li>
+          <li class="menu-list">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="close-circle-outline"></ion-icon>
+              </span>
+              <span class="text">TBD</span>
+            </a>
+          </li>
+          <div class="indicator">
+          </div>
+        </ul>
+      </div>
+
+      <div class="nav-title">
+        <h1>안녕하세유! 겜잘스 하세유 입니다</h1>
+      </div>
+    </nav>
+
+    <div class="main-title">
+      <h1>Streamer Haseu</h1>
+    </div>
+
+
+    <div class="main-image-container">
+      <img src="" alt="">
+    </div>
+
+
+
+    <div class="card-list-container">
+      <div class="container">
+        <div class="card">
+          <div class="content">
+            <img src="./img/money_eat.png" alt="">
+            <a href="https://www.twitch.tv/subs/haseu_">Subscription</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <img src="./img/money_take.png" alt="">
+            <a href="https://twip.kr/haseu_?thankyou=bGdJpLKdbv">Twip</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <img src="./img/shy.png" alt="">
+            <a href="https://discord.com/invite/FFpX7URWQ3">Discord</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <img src="./img/before_sleep.png" alt="">
+            <a href="https://www.twitch.tv/haseu_">Twitch Haseu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const list = document.querySelectorAll('.menu-list');
+      console.log(list);
+
+      function activeLink() {
+        list.forEach((item) => {
+          item.classList.remove('active'); // class name 이 active면 해당 class node제거
+        });
+        this.classList.add('active');
+      }
+      list.forEach((item) => {
+        item.addEventListener('click', activeLink);
+      });
+
+    </script>
+
+    <!-- ion icon js -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- vanilla tilt js -->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1
+      });
+
+    </script>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet"> -->
+  </body>
+
+</html>
